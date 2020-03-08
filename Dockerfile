@@ -15,6 +15,8 @@ COPY vendor vendor
 
 COPY main.go main.go
 
+COPY pkg pkg
+
 RUN go build -a -installsuffix cgo -ldflags="-s -w" \
     -o /bin/server main.go
 
